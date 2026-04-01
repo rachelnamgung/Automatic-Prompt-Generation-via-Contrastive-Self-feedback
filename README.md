@@ -1,4 +1,4 @@
-# 🖋️ Automatic Prompt Generation via Contrastive Self-Feedback
+# Automatic Prompt Generation via Contrastive Self-Feedback
 
 This repository provides an end-to-end pipeline for optimizing instructions in automated essay scoring systems using **Contrastive Self-Feedback**, leveraging Large Language Models (LLMs) to enhance evaluation accuracy.
 
