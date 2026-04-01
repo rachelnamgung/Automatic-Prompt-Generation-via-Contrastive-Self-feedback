@@ -1,5 +1,6 @@
 # Automatic-Prompt-Generation-via-Contrastive-Self-feedback
 LIB KIM, HAELIM NAMGUNG, and NAMGYU KIM
 
-# Archtect
-<img width="484" height="584" alt="image" src="https://github.com/user-attachments/assets/1009c19a-a4cc-4bf1-b47f-c13406f063f1" />
+
+# ABSTRACT
+The rapid expansion of large language model (LLM) applications across diverse domains has spurred increasing interest in automatic prompt generation, a technique focused on the efficient design of task-specific prompts. Among such approaches, the automatic prompt engineer has gained attention as a representative method for automating prompt engineering by enabling models to generate instructions based on few-shot examples. However, studies report inconsistent instruction quality, and that replacing weaker prompts with semantically similar versions of stronger ones restricts semantic diversity. To address these limitations, this study proposes a novel method, automatic prompt generation via contrastive self-feedback, which enables the model to revise its own low-quality outputs autonomously. Instead of replacing low-quality instructions, the proposed method refines them through feedback-driven iteration. Specifically, the model constructs contrastive examples by pairing each low-quality instruction’s generated response with its corresponding ground-truth output and applies self-feedback to identify reasoning errors and revise the original instruction. Experimental evaluations conducted on the IELTS Writing Essay, ASAP++ and ELLIPSE dataset demonstrate that the proposed method outperforms existing automatic prompt generation techniques with respect to instruction quality and scoring accuracy, as measured by the quadratic weighted kappa metric.
