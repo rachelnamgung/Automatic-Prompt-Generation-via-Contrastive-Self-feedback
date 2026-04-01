@@ -1,4 +1,4 @@
-# Automatic Prompt Generation via Contrastive Self-Feedback
+# 🖋️ Automatic Prompt Generation via Contrastive Self-Feedback
 
 This repository provides an end-to-end pipeline for optimizing instructions in automated essay scoring systems using **Contrastive Self-Feedback**, leveraging Large Language Models (LLMs) to enhance evaluation accuracy.
 
@@ -8,7 +8,7 @@ This repository provides an end-to-end pipeline for optimizing instructions in a
 
 To get started, install the necessary dependencies using the following command:
 
-$ pip install -r requirements.txt
+"""$ pip install -r requirements.txt"""
 
 ---
 
@@ -25,7 +25,7 @@ Generate few-shot demonstration sets and evaluation datasets (1st and 2nd sets).
 - eval_size: Number of evaluation samples (Default: 100)
 - save_path: Destination path for the generated datasets (e.g., ./data/input/path)
 
-$ python -m src.instruction_induction.data_preprocessing
+"""$ python -m src.instruction_induction.data_preprocessing"""
 
 ---
 
@@ -37,7 +37,7 @@ Generate an initial pool of instructions by providing the few-shot demonstration
 - ollama_model: LLM for instruction induction (e.g., llama3:70b-instruct)
 - save_path: Path to save the initial instruction pool
 
-$ python -m src.instruction_induction.induction
+"""$ python -m src.instruction_induction.induction"""
 
 ---
 
@@ -50,7 +50,7 @@ Perform the first evaluation to measure the scoring accuracy (QWK) of the initia
 - ollama_model: LLM used for the scoring task (e.g., llama3:70b-instruct)
 - save_path: Path to save the 1st evaluation results
 
-$ python -m src.instruction_induction.eval
+"""$ python -m src.instruction_induction.eval"""
 
 ---
 
@@ -65,7 +65,7 @@ Compare the ground truth with model predictions to identify and autonomously rev
 - ollama_model: LLM for instruction revision
 - save_path: Path to save the revised "Final Instruction Pool"
 
-$ python -m src.contrasive_self_feedback.correction
+"""$ python -m src.contrasive_self_feedback.correction"""
 
 ---
 
@@ -78,10 +78,13 @@ Re-evaluate the revised instructions (Final Instruction Pool) on an independent 
 - ollama_model: LLM used for final scoring
 - save_path: Path to save the final evaluation results
 
-$ python -m src.contrasive_self_feedback.eval
+"""$ python -m src.contrasive_self_feedback.eval"""
 
 ---
 
-## 💡 Evaluation Metric
+## 📊 Evaluation Metric
 
 This project utilizes the **Quadratic Weighted Kappa (QWK)** metric to assess the consistency and agreement between the model's predicted scores and the human-assigned ground truth.
+
+---
+
